@@ -43,6 +43,14 @@ export function RegisterPage() {
         { value: 'cryo', label: 'Cryo', color: 'text-blue-200' }
     ];
 
+    if (loading) {
+    return (
+      <div className="flex justify-center items-center py-4">
+        <div className="w-6 h-6 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+      </div>
+    )
+  }
+
     return (
         <>
             <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -77,13 +85,13 @@ export function RegisterPage() {
                                         Teyvat Info Hub
                                     </h1>
                                     <p className="text-blue-200 text-sm">
-                                        Bergabunglah dengan petualangan di dunia Teyvat
+                                        Join with Teyvat now!
                                     </p>
                                 </div>
                                 <div className="space-y-6">
                                     <div className="space-y-2">
                                         <label htmlFor="username" className="block text-sm font-medium text-blue-200">
-                                            Username Traveler
+                                            Username
                                         </label>
                                         <input
                                             type="text"
@@ -134,7 +142,7 @@ export function RegisterPage() {
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="confirmPassword" className="block text-sm font-medium text-blue-200">
-                                            Konfirmasi Password
+                                            Confirm Password
                                         </label>
                                         <div className="relative">
                                             <input
@@ -157,7 +165,7 @@ export function RegisterPage() {
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="favoriteElement" className="block text-sm font-medium text-blue-200">
-                                            Elemen Favorit
+                                            Favourite Element
                                         </label>
                                         <select
                                             id="favoriteElement"
@@ -179,13 +187,13 @@ export function RegisterPage() {
                                         className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-500/25 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-2"
                                     >
                                         <Sparkles className="w-5 h-5" />
-                                        <span>Mulai Petualangan</span>
+                                        <span>Register</span>
                                     </button>
                                     <div className="text-center">
                                         <p className="text-blue-200 text-sm">
-                                            Sudah punya akun?{" "}
-                                            <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200">
-                                                Masuk di sini
+                                            You have an account?{" "}
+                                            <a href="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200">
+                                                Login now
                                             </a>
                                         </p>
                                     </div>
