@@ -1,40 +1,32 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router'
-import { RegisterPage } from './pages/RegisterPage'
-import './index.css'
-import { LoginPage } from './pages/LoginPage'
-import { HomePage } from './pages/HomePage'
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import { RegisterPage } from './pages/RegisterPage';
+import { LoginPage } from './pages/LoginPage';
+import { HomePage } from './pages/HomePage';
+import { CharactersPage } from './pages/CharactersPage';
+import { WeaponsPage } from './pages/WeaponsPage';
+import { MapsPage } from './pages/MapsPage';
+import { GuidesPage } from './pages/GuidesPage';
+import { NewsPage } from './pages/NewsPage';
+import { MainLayout } from './layouts/MainLayout';
+import './index.css';
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/register' element={<RegisterPage />} />
-          <Route path='/login' element={<LoginPage />} />
-          <Route path='/*' element={<MainRoutes />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
-}
-
-function MainLayout() {
-  return (
-    <div>
-      <Outlet />
-    </div>
-  )
-}
-
-function MainRoutes() {
-
-  return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path='/' element={<HomePage />} />
-      </Route>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route element={<MainLayout />}>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/characters' element={<CharactersPage />} />
+          <Route path='/weapons' element={<WeaponsPage />} />
+          <Route path='/maps' element={<MapsPage />} />
+          <Route path='/guides' element={<GuidesPage />} />
+          <Route path='/news' element={<NewsPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

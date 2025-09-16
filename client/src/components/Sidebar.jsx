@@ -1,28 +1,26 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router';
 import {
     Menu, X, Home, Users, Sword, Map, BookOpen, Settings,
     Sparkles
 } from 'lucide-react';
 
-export function Sidebar({ 
-    sidebarOpen, 
-    setSidebarOpen, 
-    activeSection, 
-    handleSectionChange 
-}) {
+export function Sidebar({ sidebarOpen, setSidebarOpen }) {
+    const navigate = useNavigate();
+    const [activeSection, setActiveSection] = React.useState('home');
+    
     const sidebarItems = [
-        { id: 'home', label: 'Home', icon: Home },
-        { id: 'characters', label: 'Characters', icon: Users },
-        { id: 'weapons', label: 'Weapons', icon: Sword },
-        { id: 'maps', label: 'Maps', icon: Map },
-        { id: 'guides', label: 'Guides', icon: BookOpen },
-        { id: 'news', label: 'News', icon: Sparkles },
+        { id: 'home', label: 'Home', icon: Home, path: '/' },
+        { id: 'characters', label: 'Characters', icon: Users, path: '/characters' },
+        { id: 'weapons', label: 'Weapons', icon: Sword, path: '/weapons' },
+        { id: 'maps', label: 'Maps', icon: Map, path: '/maps' },
+        { id: 'guides', label: 'Guides', icon: BookOpen, path: '/guides' },
+        { id: 'news', label: 'News', icon: Sparkles, path: '/news' },
     ];
 
     return (
         <>
-            {/* Mobile Backdrop */}
             {sidebarOpen && (
                 <div
                     className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden z-30"
@@ -30,7 +28,6 @@ export function Sidebar({
                 ></div>
             )}
 
-            {/* Sidebar */}
             <div className={`lg:static fixed top-0 left-0 h-screen w-64 bg-black/40 backdrop-blur-xl border-r border-white/10 transform transition-transform duration-300 lg:translate-x-0 z-50 ${
                 sidebarOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
@@ -51,8 +48,9 @@ export function Sidebar({
                                 <button
                                     key={item.id}
                                     onClick={() => {
-                                        handleSectionChange(item.id);
+                                        setActiveSection(item.id);
                                         setSidebarOpen(false);
+                                        navigate(item.path);
                                     }}
                                     className={`w-full flex items-center space-x-2 px-4 py-3 rounded-xl transition-all duration-200 cursor-pointer ${
                                         activeSection === item.id
