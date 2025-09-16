@@ -200,11 +200,6 @@ export function RegisterPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-center mt-6">
-                            <p className="text-blue-300/60 text-xs">
-                                Dengan mendaftar, Anda menyetujui syarat dan ketentuan kami
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
