@@ -10,13 +10,44 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Collection belongs to User
+      Collection.belongsTo(models.User, {
+        foreignKey: 'userId'
+      });
+
+      // Collection belongs to Character
+      Collection.belongsTo(models.Character, {
+        foreignKey: 'charaterId'
+      });
+
+      // Collection belongs to Weapon
+      Collection.belongsTo(models.Weapon, {
+        foreignKey: 'weaponId'
+      });
     }
   }
   Collection.init({
-    CharaterId: DataTypes.INTEGER,
-    WeaponId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER
+    charaterId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Characters',
+        key: 'id'
+      }
+    },
+    weaponId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Weapons',
+        key: 'id'
+      }
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Collection',

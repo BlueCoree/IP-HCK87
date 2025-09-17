@@ -10,7 +10,21 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Character belongs to many Users through Collection
+      Character.belongsToMany(models.User, {
+        through: models.Collection,
+        foreignKey: 'charaterId'
+      });
+
+      // Character has many Collections
+      Character.hasMany(models.Collection, {
+        foreignKey: 'charaterId'
+      });
+
+      // Character has many Talents
+      Character.hasMany(models.Talent, {
+        foreignKey: 'characterId'
+      });
     }
   }
   Character.init({
@@ -20,6 +34,9 @@ module.exports = (sequelize, DataTypes) => {
     rarity: DataTypes.NUMBER,
     weaponType: DataTypes.STRING,
     gender: DataTypes.STRING,
+    nation: DataTypes.STRING,
+    release: DataTypes.DATE,
+    constellation: DataTypes.STRING,
     birthday: DataTypes.DATE,
     imageUrl: DataTypes.STRING,
     description: DataTypes.STRING

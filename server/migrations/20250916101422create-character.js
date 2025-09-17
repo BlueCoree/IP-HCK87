@@ -34,10 +34,10 @@ module.exports = {
         type: Sequelize.DATE
       },
       constellation: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       birthday: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       imageUrl: {
         type: Sequelize.STRING

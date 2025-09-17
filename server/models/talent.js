@@ -10,7 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Talent belongs to Character
+      Talent.belongsTo(models.Character, {
+        foreignKey: 'characterId'
+      });
+
+      // Talent has many AttScales
+      Talent.hasMany(models.AttScale, {
+        foreignKey: 'talentId'
+      });
+
+      // Talent has many Upgrades
+      Talent.hasMany(models.Upgrade, {
+        foreignKey: 'talentId'
+      });
     }
   }
   Talent.init({
@@ -18,7 +31,13 @@ module.exports = (sequelize, DataTypes) => {
     unlock: DataTypes.STRING,
     description: DataTypes.TEXT,
     type: DataTypes.STRING,
-    characterId: DataTypes.INTEGER
+    characterId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Characters',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Talent',

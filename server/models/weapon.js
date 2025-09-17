@@ -10,7 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Weapon belongs to many Users through Collection
+      Weapon.belongsToMany(models.User, {
+        through: models.Collection,
+        foreignKey: 'weaponId'
+      });
+
+      // Weapon has many Collections
+      Weapon.hasMany(models.Collection, {
+        foreignKey: 'weaponId'
+      });
     }
   }
   Weapon.init({

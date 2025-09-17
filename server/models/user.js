@@ -5,7 +5,22 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      // define association here
+      // User has many Characters through Collection
+      User.belongsToMany(models.Character, {
+        through: models.Collection,
+        foreignKey: 'userId'
+      });
+      
+      // User has many Weapons through Collection
+      User.belongsToMany(models.Weapon, {
+        through: models.Collection,
+        foreignKey: 'userId'
+      });
+
+      // User has many Collections
+      User.hasMany(models.Collection, {
+        foreignKey: 'userId'
+      });
     }
   }
   User.init({

@@ -10,13 +10,22 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Upgrade belongs to Talent
+      Upgrade.belongsTo(models.Talent, {
+        foreignKey: 'talentId'
+      });
     }
   }
   Upgrade.init({
     name: DataTypes.STRING,
     value: DataTypes.STRING,
-    talentId: DataTypes.INTEGER
+    talentId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Talents',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Upgrade',
