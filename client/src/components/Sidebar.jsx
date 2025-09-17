@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { useNavigate } from 'react-router';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 import {
     Menu, X, Home, Users, Sword, Map, BookOpen, Settings,
     Sparkles
@@ -8,7 +8,8 @@ import {
 
 export function Sidebar({ sidebarOpen, setSidebarOpen }) {
     const navigate = useNavigate();
-    const [activeSection, setActiveSection] = React.useState('home');
+    const [activeSection, setActiveSection] = useState('home');
+    const location = useLocation();
     
     const sidebarItems = [
         { id: 'home', label: 'Home', icon: Home, path: '/' },
@@ -18,6 +19,14 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
         { id: 'guides', label: 'Guides', icon: BookOpen, path: '/guides' },
         { id: 'news', label: 'News', icon: Sparkles, path: '/news' },
     ];
+
+    useEffect(() => {
+        const currentPath = location.pathname;
+        const currentItem = sidebarItems.find(el => el.path === currentPath);
+        if (currentItem) {
+            setActiveSection(currentItem.id)
+        }
+    }, [location.pathname]);
 
     return (
         <>

@@ -15,7 +15,6 @@ export function MainLayout() {
                 <div className="absolute top-1/2 right-1/3 w-32 h-32 rounded-full bg-gradient-to-br from-yellow-400/10 to-transparent animate-pulse delay-2000"></div>
             </div>
 
-            {/* Header */}
             <div className="relative z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
                 <div className="flex items-center justify-between px-6 py-4">
                     <div className="flex items-center space-x-4">
@@ -46,7 +45,6 @@ export function MainLayout() {
                 </div>
             </div>
 
-            {/* Main Content */}
             <div className="flex flex-1 relative">
                 <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
                 <div className="flex-1 h-[calc(100vh-64px)] overflow-y-auto">
