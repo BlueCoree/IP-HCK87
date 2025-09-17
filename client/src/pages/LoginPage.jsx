@@ -1,18 +1,18 @@
 import { Eye, EyeOff, Shield, Sparkles, Sword, Zap } from "lucide-react"
 import { useState } from "react"
+import { showError } from "../helpers/alert"
+import { useEffect } from "react"
+import { useNavigate } from "react-router"
 
 
 export function LoginPage() {
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
-        username: '',
         email: '',
         password: '',
-        confirmPassword: '',
-        favoriteElement: ''
     })
-
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target
@@ -25,12 +25,47 @@ export function LoginPage() {
     const handleSubmit = async (e) => {
         try {
             setLoading(true)
+            const { data } = await axios.post('http://localhost:3000/login', formData)
+            localStorage.setItem('access_token', data.access_token)
+            navigate('/')
         } catch (error) {
             console.log(error)
+            showError(error)
         } finally {
             setLoading(false)
         }
     }
+
+    async function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+
+        try {
+            setLoading(true)
+            const { data } = await axios.post('http://localhost:3000/login/google', { id_token: response.credential })
+            localStorage.setItem('access_token', data.access_token)
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+            showError(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        google.accounts.id.initialize({
+            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline",  
+            size: "medium",     
+            shape: "circle",   
+            type: "icon"}
+        );
+        // google.accounts.id.prompt();
+    }, [])
 
     if (loading) {
         return (
@@ -103,7 +138,7 @@ export function LoginPage() {
                                             value={formData.password}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-3 pr-12 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                                            placeholder="Buat password yang kuat"
+                                            placeholder="Make strong password"
                                         />
                                         <button
                                             type="button"
@@ -129,10 +164,9 @@ export function LoginPage() {
                                         </a>
                                     </p>
                                 </div>
+                                <div id="buttonDiv"></div>
                             </div>
                         </div>
-                    </div>
-                    <div className="text-center mt-6">
                     </div>
                 </div>
             </div>

@@ -1,6 +1,9 @@
 import { Eye, EyeOff, Shield, Sparkles, Sword, Zap } from "lucide-react"
 import { useState } from "react"
-
+import axios from "axios"
+import { showError } from "../helpers/alert"
+import { useNavigate } from "react-router"
+import { useEffect } from "react"
 
 export function RegisterPage() {
     const [loading, setLoading] = useState(false)
@@ -8,12 +11,10 @@ export function RegisterPage() {
         username: '',
         email: '',
         password: '',
-        confirmPassword: '',
-        favoriteElement: ''
+        element: ''
     })
-
     const [showPassword, setShowPassword] = useState(false)
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target
@@ -26,8 +27,15 @@ export function RegisterPage() {
     const handleSubmit = async (e) => {
         try {
             setLoading(true)
+            await axios({
+                method: 'post',
+                url: 'http://localhost:3000/register',
+                data: formData
+            })
+            navigate('/')
         } catch (error) {
-            console.log(error)
+            console.log(error, '<<< error register')
+            showError(error)
         } finally {
             setLoading(false)
         }
@@ -43,13 +51,49 @@ export function RegisterPage() {
         { value: 'cryo', label: 'Cryo', color: 'text-blue-200' }
     ];
 
+    async function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+
+        try {
+            setLoading(true)
+            const { data } = await axios.post('http://localhost:3000/login/google', { id_token: response.credential })
+            localStorage.setItem('access_token', data.access_token)
+            console.log(data, '<<< data google login')
+            navigate('/')
+        } catch (error) {
+            console.log(error)
+            showError(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        google.accounts.id.initialize({
+            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            {
+                theme: "outline",
+                size: "medium",
+                shape: "circle",
+                type: "icon"
+            }
+        );
+        // google.accounts.id.prompt();
+    }, [])
+
     if (loading) {
-    return (
-      <div className="flex justify-center items-center py-4">
-        <div className="w-6 h-6 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
-      </div>
-    )
-  }
+        return (
+            <div className="flex justify-center items-center py-4">
+                <div className="w-6 h-6 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+            </div>
+        )
+    }
+
+    console.log(formData, '<<< form data register')
 
     return (
         <>
@@ -141,35 +185,12 @@ export function RegisterPage() {
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="confirmPassword" className="block text-sm font-medium text-blue-200">
-                                            Confirm Password
-                                        </label>
-                                        <div className="relative">
-                                            <input
-                                                type={showConfirmPassword ? "text" : "password"}
-                                                id="confirmPassword"
-                                                name="confirmPassword"
-                                                value={formData.confirmPassword}
-                                                onChange={handleInputChange}
-                                                className="w-full px-4 py-3 pr-12 bg-white/10 border border-white/20 rounded-xl text-white placeholder-blue-200 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                                                placeholder="Ulangi password Anda"
-                                            />
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-200 hover:text-white transition-colors duration-200"
-                                            >
-                                                {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="space-y-2">
                                         <label htmlFor="favoriteElement" className="block text-sm font-medium text-blue-200">
                                             Favourite Element
                                         </label>
                                         <select
                                             id="favoriteElement"
-                                            name="favoriteElement"
+                                            name="element"
                                             value={formData.favoriteElement}
                                             onChange={handleInputChange}
                                             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
@@ -197,6 +218,7 @@ export function RegisterPage() {
                                             </a>
                                         </p>
                                     </div>
+                                    <div id="buttonDiv"></div>
                                 </div>
                             </div>
                         </div>
