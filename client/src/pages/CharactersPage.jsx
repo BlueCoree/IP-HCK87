@@ -1,31 +1,25 @@
-import React from 'react';
+import React, { use, useEffect } from 'react';
 import { Users } from 'lucide-react';
 import { CharacterCard } from '../components/CharacterCard';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCharacters } from '../store/menuCharacter';
 
 export function CharactersPage() {
-    const characters = [
-        {
-            id: 1,
-            name: "Albedo",
-            element: "Geo",
-            rarity: 5,
-            weapon: "Sword",
-            region: "Mondstadt",
-            image: "🧪",
-            description: "Seorang alkemis genius yang bekerja sebagai Kapten Detasemen Investigasi Knights of Favonius."
-        },
-        {
-            id: 2,
-            name: "Venti",
-            element: "Anemo",
-            rarity: 5,
-            weapon: "Bow",
-            region: "Mondstadt",
-            image: "🍃",
-            description: "Bard yang bebas berkelana dengan identitas rahasia sebagai Barbatos, Archon Anemo."
-        },
-    ];
+    const {data , loading, error} = useSelector( state => state.menu )
+    const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(fetchCharacters())
+    }, [])
+
+    if (loading) {
+    return (
+      <div className="flex justify-center items-center py-4">
+        <div className="w-6 h-6 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+      </div>
+    )
+  }
+  console.log(data, '<<< fetch charaters') 
     return (
         <div className="p-6 lg:p-8">
             <div className="flex items-center space-x-3 mb-6">
@@ -34,8 +28,8 @@ export function CharactersPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {characters.map((character) => (
-                    <CharacterCard character={character} />
+                {data.map((character) => (
+                    <CharacterCard key={data.id} character={character} />
                 ))}
             </div>
         </div>

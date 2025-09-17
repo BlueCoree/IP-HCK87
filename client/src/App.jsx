@@ -10,9 +10,12 @@ import { GuidesPage } from './pages/GuidesPage';
 import { NewsPage } from './pages/NewsPage';
 import { MainLayout } from './layouts/MainLayout';
 import './index.css';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path='/register' element={<RegisterPage />} />
@@ -27,6 +30,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   )
 }
 
