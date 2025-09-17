@@ -1,11 +1,23 @@
+console.log({ env: process.env.NODE_ENV });
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 const express = require('express');
+const routes = require('./routes')
+const cors = require('cors')
 const app = express();
-const PORT = process.env.PORT || 3000;
+const error = require('./middlewares/errorHandler');
+// // const corsOption = {
+// //     origin: 'http://localhost:5173/',
+// //     optionsSuccessStatus: 200
+// }
 
-app.get('/hello', (req, res) => {
-  res.json({ message: 'Hello World' });
-});
+app.use(cors())
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.use(routes);
+app.use(error);
+
+
+module.exports = app
