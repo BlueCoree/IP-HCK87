@@ -49,15 +49,14 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     element: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true
-      }
+      type: DataTypes.STRING
     }
   }, {
     sequelize,
     modelName: 'User',
   });
+  User.beforeCreate((user) => {
+    user.password = hashPassword(user.password);
+  })
   return User;
 };
