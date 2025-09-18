@@ -1,4 +1,5 @@
-import { Star, Sword } from "lucide-react";
+import { Star, Sword, Eye } from "lucide-react";
+import { Link } from "react-router";
 
 export function WeaponCard({ weapon }) {
 
@@ -43,10 +44,13 @@ export function WeaponCard({ weapon }) {
             </div>
 
             <div className="mt-4">
-                <button className="w-full px-3 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-cyan-400 rounded-lg text-sm font-semibold transition-all duration-200 border border-cyan-500/30 transform hover:scale-105">
-                    <Sword className="w-4 h-4 inline mr-1" />
+                <Link 
+                    to={`/weapons/${weapon.id}`}
+                    className="w-full px-3 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-cyan-400 rounded-lg text-sm font-semibold transition-all duration-200 border border-cyan-500/30 transform hover:scale-105 flex items-center justify-center"
+                >
+                    <Eye className="w-4 h-4 inline mr-1" />
                     View Details
-                </button>
+                </Link>
             </div>
         </div>
     );

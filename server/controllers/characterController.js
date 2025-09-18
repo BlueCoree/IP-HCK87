@@ -1,7 +1,22 @@
 const { Op } = require('sequelize');
-const { Character } = require('../models');
+const { Character, Talent } = require('../models');
 const qs = require('qs');
 class CharacterController {
+  static async getCharacterById(req, res, next) {
+    try {
+      const { id } = req.params;
+      const character = await Character.findByPk(id);
+
+      if (!character) {
+        throw { name: 'NotFound', message: 'Character not found' };
+      }
+
+      res.json(character);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async getAllCharacters(req, res, next) {
     try {
       const { filter, sort, page, search } = qs.parse(req.query);

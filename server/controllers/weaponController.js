@@ -1,7 +1,22 @@
 const { Op } = require('sequelize');
-const { Weapon } = require('../models');
+const { Weapon, AttScale, Upgrade } = require('../models');
 const qs = require('qs');
 class WeaponController {
+  static async getWeaponById(req, res, next) {
+    try {
+      const { id } = req.params;
+      const weapon = await Weapon.findByPk(id);
+
+      if (!weapon) {
+        throw { name: 'NotFound', message: 'Weapon not found' };
+      }
+
+      res.json(weapon);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async getAllWeapons(req, res, next) {
       try {
         const { filter, sort, page, search } = qs.parse(req.query);
