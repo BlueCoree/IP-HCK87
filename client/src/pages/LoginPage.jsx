@@ -3,7 +3,7 @@ import { useState } from "react"
 import { showError } from "../helpers/alert"
 import { useEffect } from "react"
 import { useNavigate } from "react-router"
-import axios from "axios";
+import axios from "../api/axios";
 
 
 export function LoginPage() {
@@ -26,18 +26,38 @@ export function LoginPage() {
     const handleSubmit = async (e) => {
         try {
             setLoading(true)
-            const { data } = await axios.post('http://localhost:3000/login', formData)
+            const { data } = await axios.post('/login', formData)
             localStorage.setItem('access_token', data.access_token)
+            // Set the token in axios default headers
+            axios.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
             navigate('/')
         } catch (error) {
             console.log(error)
-            showError(error)
+            showError(error.response?.data?.message || 'Login failed')
         } finally {
             setLoading(false)
         }
     }
 
     async function handleCredentialResponse(response) {
+        try {
+            setLoading(true);
+            console.log("Received Google credential:", response.credential);
+            
+            const { data } = await axios.post('/login/google', {
+                id_token: response.credential
+            });
+            
+            localStorage.setItem('access_token', data.access_token);
+            // Set the token in axios default headers
+            axios.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
+            navigate('/');
+        } catch (error) {
+            console.error('Google login error:', error);
+            showError(error.response?.data?.message || 'Google login failed');
+        } finally {
+            setLoading(false);
+        }
         console.log("Encoded JWT ID token: " + response.credential);
 
         try {

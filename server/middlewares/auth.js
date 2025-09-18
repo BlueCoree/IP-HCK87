@@ -2,25 +2,30 @@ const {verifyToken} = require('../helpers/jwt')
 const {User} = require('../models')
 
 const authentication = async (req, res, next) => {
-    const bearerToken = req.headers.authorization
-
-    if (!bearerToken) {
-        next({name: 'invalidToken'})
-        return;
-    }
-
     try {
-        const data = verifyToken(bearerToken)
-        const user = await User.findByPk(data.id)
+        const bearerToken = req.headers.authorization;
+        
+        if (!bearerToken) {
+            throw { name: 'invalidToken' };
+        }
+
+        const token = bearerToken.split(' ')[1];
+        if (!token) {
+            throw { name: 'invalidToken' };
+        }
+
+        const data = verifyToken(token);
+        const user = await User.findByPk(data.id);
 
         if (!user) {
-            next({name: 'invalidToken'})
-            return;
+            throw { name: 'invalidToken' };
         }
         
-        req.user = user
-        next()
+        req.user = user;
+        next();
     } catch (error) {
-        next(error)
+        next(error);
     }
 }
+
+module.exports = {authentication}

@@ -1,7 +1,53 @@
 import { Eye, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import axios from '../api/axios';
 
 export function CharacterCard({ character }) {
+
+    const [inCollection, setInCollection] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const checkCollection = async () => {
+            try {
+                const { data } = await axios.get('/collections');
+                // Now we expect Characters array directly on collection
+                const isInCollection = data.Characters?.some(char => char.id === character.id);
+                setInCollection(isInCollection);
+            } catch (error) {
+                console.error('Error checking collection status:', error);
+                // Don't alert on check - just set to false
+                setInCollection(false);
+            }
+        };
+        
+        // Only check if we have a token
+        if (localStorage.getItem('access_token')) {
+            checkCollection();
+        }
+    }, [character.id]);
+
+    const handleLoveClick = async () => {
+        if (!localStorage.getItem('access_token')) {
+            window.location.href = '/login';
+            return;
+        }
+
+        setLoading(true);
+        try {
+            // Directly post the character - backend will handle collection
+            await axios.post('/collections/character', 
+                { characterId: character.id }
+            );
+            setInCollection(true)
+        } catch (error) {
+            console.error('Error adding to collection:', error);
+            alert('Failed to add character to collection. Please try again.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const getElementColor = (element) => {
         const colors = {
@@ -49,14 +95,18 @@ export function CharacterCard({ character }) {
             </div>
 
             <div className="flex space-x-2 mt-4">
-                <Link 
+                <Link
                     to={`/characters/${character.id}`}
                     className="cursor-pointer flex-1 px-3 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-cyan-400 rounded-lg text-sm font-semibold transition-all duration-200 border border-cyan-500/30 transform hover:scale-105 flex items-center justify-center"
                 >
                     <Eye className="w-4 h-4 inline mr-1" />
                     Details
                 </Link>
-                <button className="cursor-pointer px-3 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all duration-200 transform hover:scale-110">
+                <button
+                    className={`cursor-pointer px-3 py-2 rounded-lg transition-all duration-200 transform hover:scale-110 ${inCollection ? 'bg-cyan-500 text-white' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                    onClick={handleLoveClick}
+                    disabled={loading}
+                >
                     <Heart className="w-4 h-4" />
                 </button>
             </div>

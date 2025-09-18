@@ -1,6 +1,7 @@
 const { User } = require('../models');
 const { comparePassword } = require('../helpers/bcrypt');
 const { signToken } = require('../helpers/jwt');
+const { OAuth2Client } = require('google-auth-library');
 
 class UserController {
     static async register(req, res, next) {
@@ -55,9 +56,8 @@ class UserController {
                 throw { name: 'BadRequest', message: 'ID token is required' };
             }
 
-            const { OAuth2Client } = require('google-auth-library');
+            
             const client = new OAuth2Client();
-
             const ticket = await client.verifyIdToken({
                 idToken: id_token,
                 audience: process.env.GOOGLE_CLIENT_ID,

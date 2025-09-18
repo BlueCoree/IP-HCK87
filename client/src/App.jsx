@@ -10,6 +10,7 @@ import { NewsPage } from './pages/NewsPage';
 import { MainLayout } from './layouts/MainLayout';
 import CharacterDetailPage from './pages/CharacterDetailPage';
 import WeaponDetailPage from './pages/WeaponDetailPage';
+import { CollectionPage } from './pages/CollectionPage';
 import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -30,6 +31,7 @@ function App() {
           <Route path='/maps' element={<MapsPage />} />
           <Route path='/guides' element={<GuidesPage />} />
           <Route path='/news' element={<NewsPage />} />
+          <Route path='/collections' element={<CollectionPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
