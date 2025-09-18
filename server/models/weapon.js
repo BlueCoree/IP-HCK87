@@ -31,7 +31,8 @@ module.exports = (sequelize, DataTypes) => {
     passiveName: DataTypes.STRING,
     passiveDesc: DataTypes.STRING,
     location: DataTypes.STRING,
-    ascensionMaterial: DataTypes.STRING
+    ascensionMaterial: DataTypes.STRING,
+    imageUrl: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Weapon',

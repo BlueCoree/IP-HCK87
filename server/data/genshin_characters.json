@@ -1,0 +1,370 @@
+[
+  {
+    "name": "albedo",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758171101/Albedo_dadkui.webp"
+  },
+  {
+    "name": "alhaitham",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=alhaitham"
+  },
+  {
+    "name": "aloy",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=aloy"
+  },
+  {
+    "name": "amber",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175589/Amber_iptiba.webp"
+  },
+  {
+    "name": "arataki-itto",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=arataki+itto"
+  },
+  {
+    "name": "arlecchino",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=arlecchino"
+  },
+  {
+    "name": "ayaka",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175594/Kamisato_Ayaka_z3o2g9.webp"
+  },
+  {
+    "name": "ayato",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175611/Kamisato_Ayato_lte71e.webp"
+  },
+  {
+    "name": "baizhu",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=baizhu"
+  },
+  {
+    "name": "barbara",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=barbara"
+  },
+  {
+    "name": "beidou",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=beidou"
+  },
+  {
+    "name": "bennett",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=bennett"
+  },
+  {
+    "name": "candace",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=candace"
+  },
+  {
+    "name": "charlotte",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=charlotte"
+  },
+  {
+    "name": "chevreuse",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=chevreuse"
+  },
+  {
+    "name": "chiori",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=chiori"
+  },
+  {
+    "name": "chongyun",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=chongyun"
+  },
+  {
+    "name": "clorinde",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=clorinde"
+  },
+  {
+    "name": "collei",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=collei"
+  },
+  {
+    "name": "cyno",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=cyno"
+  },
+  {
+    "name": "dehya",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=dehya"
+  },
+  {
+    "name": "diluc",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175589/Diluc_pehg4s.webp"
+  },
+  {
+    "name": "diona",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=diona"
+  },
+  {
+    "name": "dori",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=dori"
+  },
+  {
+    "name": "emilie",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=emilie"
+  },
+  {
+    "name": "eula",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=eula"
+  },
+  {
+    "name": "faruzan",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=faruzan"
+  },
+  {
+    "name": "fischl",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=fischl"
+  },
+  {
+    "name": "freminet",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=freminet"
+  },
+  {
+    "name": "furina",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175591/Furina_akwdhu.webp"
+  },
+  {
+    "name": "gaming",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=gaming"
+  },
+  {
+    "name": "ganyu",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=ganyu"
+  },
+  {
+    "name": "gorou",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=gorou"
+  },
+  {
+    "name": "hu-tao",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=hu+tao"
+  },
+  {
+    "name": "jean",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175609/Jean_vizfq3.webp"
+  },
+  {
+    "name": "kachina",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kachina"
+  },
+  {
+    "name": "kaeya",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175592/Kaeya_cbf4lc.webp"
+  },
+  {
+    "name": "kaveh",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kaveh"
+  },
+  {
+    "name": "kazuha",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kazuha"
+  },
+  {
+    "name": "keqing",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=keqing"
+  },
+  {
+    "name": "kinich",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kinich"
+  },
+  {
+    "name": "kirara",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kirara"
+  },
+  {
+    "name": "klee",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=klee"
+  },
+  {
+    "name": "kokomi",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kokomi"
+  },
+  {
+    "name": "kuki-shinobu",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=kuki+shinobu"
+  },
+  {
+    "name": "layla",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=layla"
+  },
+  {
+    "name": "lisa",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175595/Lisa_mksw2x.webp"
+  },
+  {
+    "name": "lynette",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=lynette"
+  },
+  {
+    "name": "lyney",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=lyney"
+  },
+  {
+    "name": "mika",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=mika"
+  },
+  {
+    "name": "mona",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=mona"
+  },
+  {
+    "name": "mualani",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=mualani"
+  },
+  {
+    "name": "nahida",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175599/Nahida_st44op.webp"
+  },
+  {
+    "name": "navia",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=navia"
+  },
+  {
+    "name": "neuvillette",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175601/Neuvillette_dr71rz.webp"
+  },
+  {
+    "name": "nilou",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=nilou"
+  },
+  {
+    "name": "ningguang",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=ningguang"
+  },
+  {
+    "name": "noelle",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=noelle"
+  },
+  {
+    "name": "qiqi",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=qiqi"
+  },
+  {
+    "name": "raiden",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175603/Raiden_Shogun_sh3kzb.webp"
+  },
+  {
+    "name": "razor",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=razor"
+  },
+  {
+    "name": "rosaria",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=rosaria"
+  },
+  {
+    "name": "sara",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=sara"
+  },
+  {
+    "name": "sayu",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=sayu"
+  },
+  {
+    "name": "sethos",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=sethos"
+  },
+  {
+    "name": "shenhe",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=shenhe"
+  },
+  {
+    "name": "shikanoin-heizou",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=shikanoin+heizou"
+  },
+  {
+    "name": "sigewinne",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=sigewinne"
+  },
+  {
+    "name": "sucrose",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=sucrose"
+  },
+  {
+    "name": "tartaglia",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=tartaglia"
+  },
+  {
+    "name": "thoma",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=thoma"
+  },
+  {
+    "name": "tighnari",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=tighnari"
+  },
+  {
+    "name": "traveler-anemo",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=traveler+anemo"
+  },
+  {
+    "name": "traveler-dendro",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=traveler+dendro"
+  },
+  {
+    "name": "traveler-electro",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=traveler+electro"
+  },
+  {
+    "name": "traveler-geo",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=traveler+geo"
+  },
+  {
+    "name": "traveler-hydro",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=traveler+hydro"
+  },
+  {
+    "name": "venti",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175605/Venti_whl3pb.webp"
+  },
+  {
+    "name": "wanderer",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=wanderer"
+  },
+  {
+    "name": "wriothesley",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=wriothesley"
+  },
+  {
+    "name": "xiangling",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=xiangling"
+  },
+  {
+    "name": "xianyun",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=xianyun"
+  },
+  {
+    "name": "xiao",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=xiao"
+  },
+  {
+    "name": "xingqiu",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=xingqiu"
+  },
+  {
+    "name": "xinyan",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=xinyan"
+  },
+  {
+    "name": "yae-miko",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yae+miko"
+  },
+  {
+    "name": "yanfei",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yanfei"
+  },
+  {
+    "name": "yaoyao",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yaoyao"
+  },
+  {
+    "name": "yelan",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yelan"
+  },
+  {
+    "name": "yoimiya",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yoimiya"
+  },
+  {
+    "name": "yun-jin",
+    "imageUrl": "https://via.placeholder.com/300x400.png?text=yun+jin"
+  },
+  {
+    "name": "zhongli",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175607/Zhongli_nttlsu.webp"
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "name": "albedo",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758171101/Albedo_dadkui.webp"
+  },
+  {
+    "name": "alhaitham",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "aloy",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "amber",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175589/Amber_iptiba.webp"
+  },
+  {
+    "name": "arataki-itto",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "arlecchino",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "ayaka",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175594/Kamisato_Ayaka_z3o2g9.webp"
+  },
+  {
+    "name": "ayato",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175611/Kamisato_Ayato_lte71e.webp"
+  },
+  {
+    "name": "baizhu",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "barbara",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "beidou",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "bennett",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "candace",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "charlotte",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "chevreuse",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "chiori",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "chongyun",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "clorinde",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "collei",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "cyno",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "dehya",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "diluc",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175589/Diluc_pehg4s.webp"
+  },
+  {
+    "name": "diona",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "dori",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "emilie",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "eula",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "faruzan",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "fischl",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "freminet",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "furina",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175591/Furina_akwdhu.webp"
+  },
+  {
+    "name": "gaming",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "ganyu",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "gorou",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "hu-tao",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "jean",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175609/Jean_vizfq3.webp"
+  },
+  {
+    "name": "kachina",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kaeya",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175592/Kaeya_cbf4lc.webp"
+  },
+  {
+    "name": "kaveh",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kazuha",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "keqing",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kinich",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kirara",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "klee",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kokomi",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "kuki-shinobu",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "layla",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "lisa",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175595/Lisa_mksw2x.webp"
+  },
+  {
+    "name": "lynette",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "lyney",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "mika",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "mona",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "mualani",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "nahida",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175599/Nahida_st44op.webp"
+  },
+  {
+    "name": "navia",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "neuvillette",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175601/Neuvillette_dr71rz.webp"
+  },
+  {
+    "name": "nilou",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "ningguang",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "noelle",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "qiqi",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "raiden",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175603/Raiden_Shogun_sh3kzb.webp"
+  },
+  {
+    "name": "razor",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "rosaria",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "sara",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "sayu",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "sethos",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "shenhe",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "shikanoin-heizou",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "sigewinne",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "sucrose",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "tartaglia",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "thoma",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "tighnari",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "traveler-anemo",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "traveler-dendro",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "traveler-electro",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "traveler-geo",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "traveler-hydro",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "venti",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175605/Venti_whl3pb.webp"
+  },
+  {
+    "name": "wanderer",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "wriothesley",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "xiangling",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "xianyun",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "xiao",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "xingqiu",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "xinyan",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yae-miko",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yanfei",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yaoyao",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yelan",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yoimiya",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "yun-jin",
+    "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Emilie_Icon.png"
+  },
+  {
+    "name": "zhongli",
+    "imageUrl": "https://res.cloudinary.com/dn9fzkiqw/image/upload/v1758175607/Zhongli_nttlsu.webp"
+  }
+]
