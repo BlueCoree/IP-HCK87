@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, Sparkles, LogIn, User } from 'lucide-react';
 import { Outlet, useNavigate } from 'react-router';
 import { Sidebar } from '../components/Sidebar';
@@ -6,6 +6,15 @@ import { Sidebar } from '../components/Sidebar';
 export function MainLayout() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const token = localStorage.getItem('access_token')
+
+        if (token) {
+            setUser({token})
+        }
+    }, [])
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex flex-col">

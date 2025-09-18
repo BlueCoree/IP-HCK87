@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       release: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       constellation: {
         type: Sequelize.STRING

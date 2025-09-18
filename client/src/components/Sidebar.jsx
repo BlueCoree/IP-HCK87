@@ -14,10 +14,10 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
     const sidebarItems = [
         { id: 'home', label: 'Home', icon: Home, path: '/' },
         { id: 'characters', label: 'Characters', icon: Users, path: '/characters' },
-        { id: 'weapons', label: 'Weapons', icon: Sword, path: '/weapons' },
-        { id: 'maps', label: 'Maps', icon: Map, path: '/maps' },
-        { id: 'guides', label: 'Guides', icon: BookOpen, path: '/guides' },
-        { id: 'news', label: 'News', icon: Sparkles, path: '/news' },
+        { id: 'weapons', label: 'Weapons', icon: Sword, path: '/weapons' }
+        // { id: 'maps', label: 'Maps', icon: Map, path: '/maps' },
+        // { id: 'guides', label: 'Guides', icon: BookOpen, path: '/guides' },
+        // { id: 'news', label: 'News', icon: Sparkles, path: '/news' },
     ];
 
     useEffect(() => {

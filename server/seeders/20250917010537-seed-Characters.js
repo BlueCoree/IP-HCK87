@@ -25,7 +25,7 @@ module.exports = {
           weaponType: details.data.weapon || null,
           gender: details.data.gender || null,
           nation: details.data.nation || null,
-          release: details.data.release ? new Date(details.data.release) : null,
+          release: details.data.release || null,
           constellation: details.data.constellation || null, // API doesn't provide this in date format
           birthday: details.data.birthday || null,
           imageUrl: imgUrl,

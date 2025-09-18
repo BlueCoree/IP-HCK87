@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     weaponType: DataTypes.STRING,
     gender: DataTypes.STRING,
     nation: DataTypes.STRING,
-    release: DataTypes.DATE,
+    release: DataTypes.STRING,
     constellation: DataTypes.STRING,
     birthday: DataTypes.DATE,
     imageUrl: DataTypes.STRING,

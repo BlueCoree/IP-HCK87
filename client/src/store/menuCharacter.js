@@ -6,7 +6,8 @@ const menuSlice = createSlice({
     initialState: {
         data: [],
         loading: false,
-        error: null
+        error: null,
+        pagination: {total: 0, page: 1, limit: 10, totalPages: 0}
     },
     reducers: {},
     extraReducers: (builder) => {
@@ -16,11 +17,12 @@ const menuSlice = createSlice({
         })
         builder.addCase(fetchCharacters.fulfilled, (state, action) => {
             state.loading = false
-            state.data = action.payload
+            state.data = action.payload.data
+            state.pagination = action.payload.pagination
         })
         builder.addCase(fetchCharacters.rejected, (state, action) => {
             state.loading = false
-            // state.error = error.message
+            state.error = action.error.message
         })
     }
 })
@@ -28,14 +30,27 @@ const menuSlice = createSlice({
 export const menuCharacterReducer = menuSlice.reducer;
 export const menuCharacterActions = menuSlice.actions;
 
-export const fetchCharacters = createAsyncThunk('menuCharacter/characters', async function fetchCharacters(params, thunkAPI) {
+export const fetchCharacters = createAsyncThunk(
+    'menuCharacter/characters', 
+    async function fetchCharacters(params = {}, thunkAPI) {
     try {
+        const { page = { number: 1, size: 10 }, sort = null, filter = null, search = '' } = params;
+        const query = new URLSearchParams();
+
+        if (search) query.append('search', search);
+        if (filter) query.append('filter', filter);
+        if(sort) query.append('sort', sort)
+        if (page) {
+            if (page.size) query.append('page[size]', page.size);
+            if (page.number) query.append('page[number]', page.number);  
+        }
+
         const { data } = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/characters'
+            url: `http://localhost:3000/characters?${query.toString()}`
         })
         return data
     } catch (error) {
-        throw error
+        return thunkAPI.rejectWithValue(error.response?.data || error.message)
     }
 })

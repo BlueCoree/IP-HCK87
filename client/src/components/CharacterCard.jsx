@@ -19,31 +19,35 @@ export function CharacterCard({ character }) {
     return (
         <div
             key={character.id}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
-        >
-            <div className="flex items-center space-x-4 mb-4">
-                <div className="">{character.image}</div>
-                <div>
-                    <h3 className="text-xl font-bold text-white">{character.name}</h3>
-                    <div className={`text-sm px-2 py-1 rounded-full mt-1 inline-block ${getElementColor(character.element)}`}>
-                        {character.element}
-                    </div>
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 transform transition-all duration-300 hover:scale-105 hover:bg-white/20">
+
+            <div className="w-full h-64 mb-3 flex justify-center items-center">
+                <img
+                    src={character.imageUrl}
+                    alt={`Image ${character.name}`}
+                    className="max-h-full max-w-full object-contain rounded-xl"
+                />
+            </div>
+
+            <div>
+                <h3 className="text-xl mb-2 font-bold text-white">{character.name}</h3>
+                <div className={`text-sm px-2 py-1 mb-3 rounded-full mt-1 inline-block ${getElementColor(character.vision)}`}>
+                    {character.vision}
                 </div>
             </div>
-            <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                {character.description}
-            </p>
+
             <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-blue-200">
-                    {character.weapon}
+                    {character.weaponType}
                 </span>
                 <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-blue-200">
-                    {character.region}
+                    {character.nation}
                 </span>
                 <span className="text-xs px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-400">
                     ★{character.rarity}
                 </span>
             </div>
+
             <div className="flex space-x-2 mt-4">
                 <button className="cursor-pointer flex-1 px-3 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30 text-cyan-400 rounded-lg text-sm font-semibold transition-all duration-200 border border-cyan-500/30 transform hover:scale-105">
                     <Eye className="w-4 h-4 inline mr-1" />
