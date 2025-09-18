@@ -6,12 +6,12 @@ import {
     Sparkles
 } from 'lucide-react';
 
-export function Sidebar({ sidebarOpen, setSidebarOpen }) {
+export function Sidebar({ sidebarOpen, setSidebarOpen, user }) {
     const navigate = useNavigate();
     const [activeSection, setActiveSection] = useState('home');
     const location = useLocation();
     
-    const sidebarItems = [
+    let sidebarItems = [
         { id: 'home', label: 'Home', icon: Home, path: '/' },
         { id: 'characters', label: 'Characters', icon: Users, path: '/characters' },
         { id: 'weapons', label: 'Weapons', icon: Sword, path: '/weapons' }
@@ -19,6 +19,10 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
         // { id: 'guides', label: 'Guides', icon: BookOpen, path: '/guides' },
         // { id: 'news', label: 'News', icon: Sparkles, path: '/news' },
     ];
+
+    if (user) {
+        sidebarItems.push({id: 'collections', label: 'Collections', icon: Settings, path: '/collections'})
+    }
 
     useEffect(() => {
         const currentPath = location.pathname;

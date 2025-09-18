@@ -12,7 +12,7 @@ export function MainLayout() {
         const token = localStorage.getItem('access_token')
 
         if (token) {
-            setUser({token})
+            setUser({ token })
         }
     }, [])
 
@@ -42,20 +42,39 @@ export function MainLayout() {
                     </div>
 
                     <div className="flex items-center space-x-4">
-                        <button onClick={() => navigate('/login')} className="flex items-center space-x-2 px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 cursor-pointer">
-                            <LogIn className="w-4 h-4" />
-                            <span>Login</span>
-                        </button>
-                        <button onClick={() => navigate('/register')} className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 cursor-pointer transform hover:scale-105">
-                            <User className="w-4 h-4" />
-                            <span>Register</span>
-                        </button>
+                        {!user ? (
+                            <>
+                                <button onClick={() => navigate('/login')} className="flex items-center space-x-2 px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200 cursor-pointer">
+                                    <LogIn className="w-4 h-4" />
+                                    <span>Login</span>
+                                </button>
+                                <button onClick={() => navigate('/register')} className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 cursor-pointer transform hover:scale-105">
+                                    <User className="w-4 h-4" />
+                                    <span>Register</span>
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                <span className="text-white font-semibold">{user.username}</span>
+                                <button
+                                    onClick={() => {
+                                        localStorage.removeItem("access_token");
+                                        setUser(null);
+                                        navigate('/');
+                                    }}
+                                    className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                                >
+                                    <X className="w-4 h-4 text-center" />
+                                    <span>Logout</span>
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-1 relative">
-                <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+                <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} user={user} />
                 <div className="flex-1 h-[calc(100vh-64px)] overflow-y-auto">
                     <Outlet />
                 </div>

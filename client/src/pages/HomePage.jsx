@@ -21,12 +21,12 @@ export function HomePage() {
                         <Sparkles className="w-5 h-5" />
                         <span>Explore Characters</span>
                     </button>
-                    <button
+                    {/* <button
                         onClick={() => navigate('/news')}
                         className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-semibold transition-all duration-200 border border-white/20 cursor-pointer transform hover:scale-105"
                     >
                         Latest Updates
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>

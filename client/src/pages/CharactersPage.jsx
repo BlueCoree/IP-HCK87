@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Users } from 'lucide-react';
 import { CharacterCard } from '../components/CharacterCard';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,7 +21,7 @@ export function CharactersPage() {
     useEffect(() => {
         const handler = setTimeout(() => {
             setDebouncedSearch(search)
-        }, 300)
+        }, 800)
 
         return () => clearTimeout(handler)
     }, [search])

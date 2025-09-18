@@ -22,7 +22,7 @@ class CharacterController {
 
       if (filter) {
         paramsQuerySQL.where = {
-          categoryId: filter
+          vision: filter
         }
 
       }
