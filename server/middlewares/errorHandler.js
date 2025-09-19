@@ -12,6 +12,7 @@ const errorHandle = ((err, _req, res, _next) => {
       break;
     case "Unauthentication":
       res.status(401).json({message: "Invalid email or password!"})
+      break;
     case "isEmail":
       res.status(400).json({message: "Email is required!"})
       break;
@@ -29,6 +30,7 @@ const errorHandle = ((err, _req, res, _next) => {
       break;
     case "isImage":
       res.status(400).json({message: err.message})
+      break;
     default:
       res.status(500).json({message: "Internal Server Error"})
       break;

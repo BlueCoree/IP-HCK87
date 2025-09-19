@@ -23,7 +23,7 @@ class CollectionController {
 
             await Collection.create({
                 userId,
-                charaterId: characterId
+                characterId: characterId
             });
 
             const collections = await Collection.findAll({
@@ -33,6 +33,7 @@ class CollectionController {
 
             res.json(collections);
         } catch (err) {
+            console.log(err, '<<< err collection controller');
             next(err);
         }
     }
@@ -45,7 +46,7 @@ class CollectionController {
             await Collection.destroy({
                 where: {
                     userId,
-                    charaterId: characterId
+                    characterId: characterId
                 }
             });
 

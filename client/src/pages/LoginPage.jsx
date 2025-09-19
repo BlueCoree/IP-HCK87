@@ -1,9 +1,11 @@
 import { Eye, EyeOff, Shield, Sparkles, Sword, Zap } from "lucide-react"
 import { useState } from "react"
 import { showError } from "../helpers/alert"
-import { useEffect } from "react"
+import { useEffect, useCallback } from "react"
 import { useNavigate } from "react-router"
 import axios from "../api/axios";
+
+/* global google */
 
 
 export function LoginPage() {
@@ -24,6 +26,7 @@ export function LoginPage() {
     }
 
     const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             setLoading(true)
             const { data } = await axios.post('/login', formData)
@@ -39,7 +42,7 @@ export function LoginPage() {
         }
     }
 
-    async function handleCredentialResponse(response) {
+    const handleCredentialResponse = useCallback(async (response) => {
         try {
             setLoading(true);
             console.log("Received Google credential:", response.credential);
@@ -58,20 +61,7 @@ export function LoginPage() {
         } finally {
             setLoading(false);
         }
-        console.log("Encoded JWT ID token: " + response.credential);
-
-        try {
-            setLoading(true)
-            const { data } = await axios.post('http://localhost:3000/login/google', { id_token: response.credential })
-            localStorage.setItem('access_token', data.access_token)
-            navigate('/')
-        } catch (error) {
-            console.log(error)
-            showError(error)
-        } finally {
-            setLoading(false)
-        }
-    }
+    }, [navigate])
 
     useEffect(() => {
         google.accounts.id.initialize({
@@ -86,7 +76,7 @@ export function LoginPage() {
             type: "icon"}
         );
         // google.accounts.id.prompt();
-    }, [])
+    }, [handleCredentialResponse])
 
     if (loading) {
         return (

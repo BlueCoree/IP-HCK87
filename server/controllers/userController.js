@@ -28,7 +28,7 @@ class UserController {
                 return;
             }
 
-            const user = await User.findeOne({ where: { email } })
+            const user = await User.findOne({ where: { email } })
 
             if (!user) {
                 next({ name: 'Unauthentication' })
@@ -39,11 +39,13 @@ class UserController {
 
             if (!isPasswordValid) {
                 next({ name: 'Unauthentication' })
+                return
             }
 
             const access_token = signToken({ id: user.id, username: user.username, email: user.email, element: user.element })
             res.status(200).json({ access_token });
         } catch (error) {
+            console.log(error, '<<< error login server');
             next(error);
         }
     }

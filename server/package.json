@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "npx nodemon bin/www",
     "test": "cross-env NODE_ENV=test jest --coverage --detectOpenHandles --verbose",
-    "test:watch": "cross-env NODE_ENV=test jest --watch --verbose"
+    "test:watch": "cross-env NODE_ENV=test jest --watch --verbose",
+    "dbsetup": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
