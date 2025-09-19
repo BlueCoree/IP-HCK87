@@ -56,7 +56,7 @@ module.exports = {
     });
 
     await queryInterface.addConstraint('Collections', {
-      fields: ['charaterId'],
+      fields: ['characterId'],
       type: 'foreign key',
       name: 'fk_collection_character',
       references: {

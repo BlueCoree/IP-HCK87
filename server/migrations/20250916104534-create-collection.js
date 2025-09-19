@@ -9,14 +9,28 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      charaterId: {
-        type: Sequelize.INTEGER
+      characterId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Characters',
+          key: 'id'
+        }
       },
       weaponId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Weapons',
+          key: 'id'
+        }
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

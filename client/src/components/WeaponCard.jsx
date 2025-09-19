@@ -1,4 +1,4 @@
-import { Star, Sword, Eye } from "lucide-react";
+import { Star, Eye } from "lucide-react";
 import { Link } from "react-router";
 
 export function WeaponCard({ weapon }) {

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'userId'
       });
       Collection.belongsTo(models.Character, {
-        foreignKey: 'charaterId'
+        foreignKey: 'characterId'
       });
     }
   }
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    charaterId: {
+    characterId: {
       type: DataTypes.INTEGER,
       references: {
         model: 'Characters',

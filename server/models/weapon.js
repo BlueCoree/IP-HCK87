@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
   Weapon.init({
     name: DataTypes.STRING,
     type: DataTypes.STRING,
-    rarity: DataTypes.NUMBER,
-    baseAttack: DataTypes.NUMBER,
+    rarity: DataTypes.INTEGER,
+    baseAttack: DataTypes.INTEGER,
     subStat: DataTypes.STRING,
     passiveName: DataTypes.STRING,
     passiveDesc: DataTypes.STRING,

@@ -9,7 +9,6 @@ export function WeaponsPage() {
     const dispatch = useDispatch()
     const [page, setPage] = useState(1)
     const [search, setSearch] = useState('')
-    // const [sort, setSort] = useState(null)
     const [debouncedSearch, setDebouncedSearch] = useState(search)
 
     const handleChange = (event) => {

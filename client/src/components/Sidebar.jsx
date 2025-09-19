@@ -1,10 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import {
-    Menu, X, Home, Users, Sword, Map, BookOpen, Settings,
-    Sparkles
-} from 'lucide-react';
+import { X, Home, Users, Sword, Settings } from 'lucide-react';
 
 export function Sidebar({ sidebarOpen, setSidebarOpen, user }) {
     const navigate = useNavigate();
