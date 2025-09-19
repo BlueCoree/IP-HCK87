@@ -43,41 +43,41 @@ module.exports = {
     });
 
     // Add foreign keys to Collections
-    await queryInterface.addConstraint('Collections', {
-      fields: ['userId'],
-      type: 'foreign key',
-      name: 'fk_collection_user',
-      references: {
-        table: 'Users',
-        field: 'id'
-      },
-      onDelete: 'CASCADE',
-      onUpdate: 'CASCADE'
-    });
+    // await queryInterface.addConstraint('Collections', {
+    //   fields: ['userId'],
+    //   type: 'foreign key',
+    //   name: 'fk_collection_user',
+    //   references: {
+    //     table: 'Users',
+    //     field: 'id'
+    //   },
+    //   onDelete: 'CASCADE',
+    //   onUpdate: 'CASCADE'
+    // });
 
-    await queryInterface.addConstraint('Collections', {
-      fields: ['characterId'],
-      type: 'foreign key',
-      name: 'fk_collection_character',
-      references: {
-        table: 'Characters',
-        field: 'id'
-      },
-      onDelete: 'CASCADE',
-      onUpdate: 'CASCADE'
-    });
+    // await queryInterface.addConstraint('Collections', {
+    //   fields: ['characterId'],
+    //   type: 'foreign key',
+    //   name: 'fk_collection_character',
+    //   references: {
+    //     table: 'Characters',
+    //     field: 'id'
+    //   },
+    //   onDelete: 'CASCADE',
+    //   onUpdate: 'CASCADE'
+    // });
 
-    await queryInterface.addConstraint('Collections', {
-      fields: ['weaponId'],
-      type: 'foreign key',
-      name: 'fk_collection_weapon',
-      references: {
-        table: 'Weapons',
-        field: 'id'
-      },
-      onDelete: 'CASCADE',
-      onUpdate: 'CASCADE'
-    });
+    // await queryInterface.addConstraint('Collections', {
+    //   fields: ['weaponId'],
+    //   type: 'foreign key',
+    //   name: 'fk_collection_weapon',
+    //   references: {
+    //     table: 'Weapons',
+    //     field: 'id'
+    //   },
+    //   onDelete: 'CASCADE',
+    //   onUpdate: 'CASCADE'
+    // });
   },
 
   async down(queryInterface, Sequelize) {
@@ -85,8 +85,8 @@ module.exports = {
     await queryInterface.removeConstraint('Talents', 'fk_talent_character');
     await queryInterface.removeConstraint('AttScales', 'fk_attscale_talent');
     await queryInterface.removeConstraint('Upgrades', 'fk_upgrade_talent');
-    await queryInterface.removeConstraint('Collections', 'fk_collection_user');
-    await queryInterface.removeConstraint('Collections', 'fk_collection_character');
-    await queryInterface.removeConstraint('Collections', 'fk_collection_weapon');
+    // await queryInterface.removeConstraint('Collections', 'fk_collection_user');
+    // await queryInterface.removeConstraint('Collections', 'fk_collection_character');
+    // await queryInterface.removeConstraint('Collections', 'fk_collection_weapon');
   }
 };

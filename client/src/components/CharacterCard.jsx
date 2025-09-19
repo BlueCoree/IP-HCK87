@@ -38,7 +38,8 @@ export function CharacterCard({ character }) {
         try {
             // Directly post the character - backend will handle collection
             await axios.post('/collections/character', 
-                { characterId: character.id }
+                { characterId: character.id },
+                { headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` } }
             );
             setInCollection(true)
         } catch (error) {
